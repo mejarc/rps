@@ -1,6 +1,6 @@
-require 'user'
-require 'weapon'
-require 'tests'
+require_relative './user.rb'
+require_relative './weapon.rb'
+ require_relative './tests.rb'
 
 class Game #jason
   #attributes: user weapon, computer weapon, the result

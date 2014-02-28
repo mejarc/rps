@@ -6,28 +6,28 @@ class Weapon #subclass for each weapon, or just have 5 instances, #melanie
   def initialize(name)
     @name = name
   end
-  
-  def self.create_weapon
-    self if @name
 
-  def who_beats_who(opponent)
-  
-    case name
+  def name_to_number
+    case @name
     when 'rock'
-      0
-    when 'Spock'
-      1
+      return 0
+    when 'spock'
+      return 1
     when 'paper'
-      2
+      return 2
     when 'lizard'
-      3
-    when 'scissors'
-      4
+      return 3
+    else
+      return 4
     end
+  end
+
+  def who_beats_who
+    player_weapon = name_to_number
     # Game must generate `opponent`
     # placeholder
     opponent = 4
-    difference = (name - opponent) % 5
+    difference = (player_weapon - opponent) % 5
     if [1, 2].include?(difference)
       'Player wins'
     elsif difference.zero?
