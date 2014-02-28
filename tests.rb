@@ -10,5 +10,4 @@ weapon = Weapon.new(['rock', 'spock', 'paper', 'lizard', 'scissors'].sample)
 p weapon
 # cf. http://en.wikipedia.org/wiki/File:Normal_form_matrix_of_Rock-paper-scissors-lizard-Spock.jpg
 spock = Weapon.new('spock')
-p spock.name_to_number
-p spock.who_beats_who == 'Player wins'
+p spock.name_to_number('spock') == 1
