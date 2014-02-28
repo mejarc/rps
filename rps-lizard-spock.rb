@@ -4,8 +4,19 @@ class Game #jason
 end
 
 class User #melanie
-  #attributes: id
+  #attributes: id (database-generated primary key), name (default is user's phone #)
   #behavior: add_up_total_score
+  attr_accessor :id, :name
+
+  def initialize(id = 1, name = 4155551212)
+    @id = id
+    @name = name
+  end
+
+  def add_up_score
+    # needs to compute from Session?
+  end
+
 end
 
 class Session #jordan
@@ -20,3 +31,9 @@ end
 
 
 #additional Twilio classes, database classes
+
+##
+# Tests
+melanie = User.new
+p melanie.id == 1
+p melanie.name == 4155551212
