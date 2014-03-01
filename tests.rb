@@ -1,4 +1,4 @@
-
+require_relative './rps-lizard-spock.rb'
 ##
 # Tests
 # session = Session.new
@@ -15,4 +15,4 @@ spock = Weapon.new('spock')
 p spock.name_to_number('spock') == 1
 
 game_session = Session.new(melanie, computer)
-session.start_loop(5)
+game_session.start_game_loop(5)

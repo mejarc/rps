@@ -2,6 +2,7 @@
 class Weapon #subclass for each weapon, or just have 5 instances, #melanie
   #attributes: name, (what_it_beats, what_it_loses_to) or who_beats_who(all)
   #readers
+  attr_reader :index, :name
   def initialize(name)
     @name = name
     @index = name_to_number(@name)
