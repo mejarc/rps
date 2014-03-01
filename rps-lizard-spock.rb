@@ -46,7 +46,7 @@ class Game #jason
 
     end
 
-    View.show_results(@player1, @player2)
+    View.show_results(@player1, @player2, @winner)
 
   end
 
