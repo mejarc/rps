@@ -1,20 +1,18 @@
 require_relative './user.rb'
 require_relative './weapon.rb'
-#require_relative './tests.rb'
+
 
 class Session #jordan
   def initialize(player1, player2)
     @player1 = player1
     @player2 = player2
-    # @player1_score = 0
-    # @player2_score = 0
+
   end
 
   def start_game_loop(game_count)
     game_count.times do |count|
       game = Game.new(@player1, @player2)
       game.play
-      #p game.winner.name
     end
   end
 end
@@ -28,7 +26,7 @@ class Game #jason
   end
 
   def choose_weapon(player)
-    #logic
+
     puts "Enter weapon choice"
     arg = gets.chomp
     player.set_weapon(arg)
@@ -43,7 +41,7 @@ class Game #jason
     difference = (@player1.weapon.index - @player2.weapon.index) % 5
     if [1, 2].include?(difference)
       @winner = @player1
-    elsif [3,4].include?(difference)
+    elsif [3, 4].include?(difference)
       @winner = @player2
 
     end
@@ -60,9 +58,6 @@ class Game #jason
     end
   end
 
-  # def resolve_tie
-  #   play
-  # end
 
   def result
   end

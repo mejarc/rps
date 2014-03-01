@@ -23,21 +23,6 @@ class Weapon #subclass for each weapon, or just have 5 instances, #melanie
     end
   end
 
-# put in Game
-  # def who_beats_who
-  #   player_weapon = weapon.index
-  #   # Game must generate `opponent`
-  #   # placeholder
-  #   opponent = 4
-  #   difference = (player_weapon - opponent) % 5
-  #   if [1, 2].include?(difference)
-  #     'Player wins'
-  #   elsif difference.zero?
-  #     'Computer wins'
-  #   else
-  #     'tie'
-  #   end
-  # end
 end
 
 

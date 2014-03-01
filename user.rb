@@ -5,7 +5,7 @@ class User #melanie
   attr_accessor :id, :name, :score
   attr_reader :weapon
 
-  def initialize(id = 1, name = 4155551212)
+  def initialize(name = "Computer", id = 1)
     @id = id
     @name = name
     @score = 0
@@ -15,9 +15,10 @@ class User #melanie
   def set_weapon(weapon_name)
     @weapon = Weapon.new(weapon_name)
   end
-  
+
   def add_up_score
     # needs to compute from Session?
   end
 
 end
+
