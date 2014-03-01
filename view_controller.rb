@@ -1,3 +1,5 @@
+require_relative './rps-lizard-spock.rb'
+
 class Controller
   def self.play!
     create_players
@@ -29,3 +31,5 @@ class View
 
 
 end
+
+Controller.play!
