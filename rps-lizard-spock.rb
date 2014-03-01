@@ -21,6 +21,7 @@ class Session #jordan
       end
     end
     options = {player1: @player1, player2: @player2, player1_wins: @player1_wins, player2_wins: @player2_wins}
+    @player1.import_results(@player1_wins, @player2_wins)
     View.end_message(options)
   end
 end
