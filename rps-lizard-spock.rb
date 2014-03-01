@@ -14,6 +14,7 @@ class Session #jordan
       game = Game.new(@player1, @player2)
       game.play
     end
+    View.end_message
   end
 end
 
@@ -26,8 +27,7 @@ class Game #jason
   end
 
   def choose_weapon(player)
-
-    puts "Enter weapon choice"
+    View.get_weapon_choice
     arg = gets.chomp
     player.set_weapon(arg)
   end
@@ -46,15 +46,15 @@ class Game #jason
 
     end
 
-    puts "Player 1 chose #{@player1.weapon.name}"
-    puts "Player 2 chose #{@player2.weapon.name}"
+    puts "#{@player1.name.capitalize} chose #{@player1.weapon.name}"
+    puts "#{@player2.name.capitalize} chose #{@player2.weapon.name}"
 
     if @winner == @player1
-      puts "Player 1 wins"
+      puts "#{@player1.name.capitalize} wins"
     elsif @winner == @player2
-      puts "Player 2 wins"
+      puts "#{@player2.name.capitalize} wins"
     else
-      puts "Something weird"
+      puts "Something weird happened"
     end
   end
 

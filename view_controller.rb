@@ -29,7 +29,13 @@ class View
     puts "How many games would you like to play?"
   end
 
+  def self.get_weapon_choice
+    puts "Choose a weapon: rock, paper, scissors, lizard, spock"
+  end
 
+  def self.end_message
+    puts "Thanks for playing!"
+  end
 end
 
 Controller.play!
