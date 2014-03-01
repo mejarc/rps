@@ -33,11 +33,18 @@ class View
     puts "Choose a weapon: rock, paper, scissors, lizard, spock"
   end
 
-  def self.end_message
+  def self.end_message(options = {})
+    player1 = options[:player1]
+    player2 = options[:player2]
+    player1_wins = options[:player1_wins]
+    player2_wins = options[:player2_wins]
+    puts "#{player1.name.capitalize}'s total wins: #{player1_wins}"
+    puts "#{player2.name.capitalize}'s total wins: #{player2_wins}"
+
     puts "Thanks for playing!"
   end
 
-  def self.show_results(player1, player2, winner)
+  def self.show_game_result(player1, player2, winner)
     puts "#{player1.name.capitalize} chose #{player1.weapon.name}"
     puts "#{player2.name.capitalize} chose #{player2.weapon.name}"
 
