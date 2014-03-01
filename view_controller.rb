@@ -36,6 +36,22 @@ class View
   def self.end_message
     puts "Thanks for playing!"
   end
+
+  def self.show_results(player1, player2)
+    puts "#{player1.name.capitalize} chose #{player1.weapon.name}"
+    puts "#{player2.name.capitalize} chose #{player2.weapon.name}"
+
+    if @winner == @player1
+      puts "#{player1.name.capitalize} wins"
+    elsif @winner == @player2
+      puts "#{player2.name.capitalize} wins"
+    else
+      puts "Something weird happened"
+    end
+
+  end
+
+
 end
 
 Controller.play!

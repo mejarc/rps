@@ -46,16 +46,8 @@ class Game #jason
 
     end
 
-    puts "#{@player1.name.capitalize} chose #{@player1.weapon.name}"
-    puts "#{@player2.name.capitalize} chose #{@player2.weapon.name}"
+    View.show_results(@player1, @player2)
 
-    if @winner == @player1
-      puts "#{@player1.name.capitalize} wins"
-    elsif @winner == @player2
-      puts "#{@player2.name.capitalize} wins"
-    else
-      puts "Something weird happened"
-    end
   end
 
 
